@@ -1,0 +1,139 @@
+.icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  font-size: 30px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #231F20;
+  font-size: 20px;
+  background: #FFF3F5;
+}
+
+.wrap {
+  position: relative;
+  margin-top: 65px;
+}
+.wrap.like .stepper {
+  background: #FF6F62;
+}
+.wrap.like .stepper svg {
+  fill: #fff;
+}
+.wrap.like .count {
+  color: #FF6F62;
+}
+
+.stepper {
+  margin-top: -65px;
+  margin-left: -65px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 64px;
+  position: relative;
+  box-shadow: -1px 57px 80px -17px rgba(255, 73, 87, 0.25);
+  z-index: 2;
+}
+.stepper::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+.stepper svg {
+  position: absolute;
+  top: 37px;
+  left: 37px;
+  fill: #FF6F62;
+  z-index: 2;
+}
+.stepper .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+.stepper .circle.white {
+  background: #fff;
+}
+.stepper .circle.pink {
+  background: #FF6F62;
+}
+
+.count {
+  position: absolute;
+  right: -71px;
+  top: 47px;
+  color: #ffc8c4;
+  font-size: 36px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes github {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes github {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.desc {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #ffbac1;
+}
