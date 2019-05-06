@@ -1,28 +1,68 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
-<title>满天星星音乐 -  播放 </title>
+<!-- saved from url=(0043)http://down.admin5.com/demo/code_pop/39/69/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="music/style.css">
+<title>3D万花筒动画 - hdd</title>
+
+<link rel="stylesheet" href="3D/style.css">
 
 </head>
 <body>
 
-<audio controls="controls" autoplay="autoplay">
-    <source src="music/zzsc.mp3">
-</audio>
+<style>
+  css-doodle {
+    --color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);
+      
+    --rule: (
+      :doodle {
+        @grid: 30x1 / 18vmin;
+        --deg: @p(-180deg, 180deg);
+      }
+      :container {
+        perspective: 30vmin;
+      }
+      :after, :before {
+        content: '';
+        background: var(--color); 
+        @place-cell: @r(100%) @r(100%);
+        @size: @r(6px);
+        @shape: heart;
+      }
+    
+      @place-cell: center;
+      @size: 100%;
+    
+      box-shadow: @m(2, (0 0 50px var(--color)));
+      background: @m(100, (
+        radial-gradient(var(--color) 50%, transparent 0) 
+        @r(-20%, 120%) @r(-20%, 100%) / 1px 1px
+        no-repeat
+      ));
+    
+      will-change: transform, opacity;
+      animation: scale-up 12s linear infinite;
+      animation-delay: calc(-12s / @size() * @i());
 
-<div id="background" class="wall"></div>
-<div id="midground" class="wall"></div>
-<div id="foreground" class="wall"></div>
-<div id="top" class="wall"></div>
+      @keyframes scale-up {
+        0%, 95.01%, 100% {
+          transform: translateZ(0) rotate(0);
+          opacity: 0;
+        }
+        10% { 
+          opacity: 1; 
+        }
+        95% {
+          transform: 
+            translateZ(35vmin) rotateZ(@var(--deg));
+        }
+      }
+    )
+  }
+</style>
 
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
-<p>来源：<a href="http://down.admin5.com/" target="_blank">A5源码  </a></p>
-</div>
+<css-doodle use="var(--rule)"></css-doodle>
+
+<script src="3D/css-doodle.min.js.下载"></script>
+
 
 </body></html>
