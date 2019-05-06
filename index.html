@@ -2,25 +2,27 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<title>CSS3 SVG水波纹动画特效 - A5源码</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<title>满天星星音乐 -  播放 </title>
 
-<link rel="stylesheet" href="./sea/style.css">
+<link rel="stylesheet" href="music/style.css">
 
 </head>
 <body>
 
-<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-  <filter id="water">
-    <feTurbulence type="fractalNoise" baseFrequency=".05 .05" numOctaves="1" result="noise1"></feTurbulence>
-    <feColorMatrix in="noise1" type="hueRotate" values="0" result="noise2">
-      <animate attributeName="values" from="0" to="360" dur="1s" repeatCount="indefinite">
-    </animate></feColorMatrix>
-    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="7" in="SourceGraphic" in2="noise2"></feDisplacementMap>
-  </filter>
-</svg>
+<audio controls="controls" autoplay="autoplay">
+    <source src="music/zzsc.mp3">
+</audio>
 
-<img src="./sea/hawaii-water-small.jpg" alt="Hawaiian water crashes against the rocks">
+<div id="background" class="wall"></div>
+<div id="midground" class="wall"></div>
+<div id="foreground" class="wall"></div>
+<div id="top" class="wall"></div>
 
-
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://down.admin5.com/" target="_blank">A5源码  </a></p>
+</div>
 
 </body></html>
